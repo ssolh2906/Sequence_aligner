@@ -6,8 +6,6 @@ def global_alignment(sequence1, sequence2):
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
-        if not isinstance(sequence1, str) or not isinstance(sequence2, str):
-            raise TypeError("Sequences must be strings.")
         global_aligner = get_global_aligner()
         global_alignments = global_aligner.align(sequence1, sequence2)
         return global_alignments
@@ -19,8 +17,6 @@ def local_alignment(sequence1, sequence2):
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
-        if not isinstance(sequence1, str) or not isinstance(sequence2, str):
-            raise TypeError("Sequences must be strings.")
         local_aligner = get_local_aligner()
         local_alignments = local_aligner.align(sequence1, sequence2)
         return local_alignments
@@ -32,8 +28,6 @@ def global_alignment_with_penalty(sequence1, sequence2, extended_gap_score, open
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
-        if not isinstance(sequence1, str) or not isinstance(sequence2, str):
-            raise TypeError("Sequences must be strings.")
         global_aligner = get_global_aligner()
         global_aligner.extend_gap_score = float(extended_gap_score)
         global_aligner.open_gap_score = float(open_gap_score)
@@ -50,8 +44,6 @@ def local_alignment_with_penalty(sequence1, sequence2, extended_gap_score, open_
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
-        if not isinstance(sequence1, str) or not isinstance(sequence2, str):
-            raise TypeError("Sequences must be strings.")
         local_aligner = get_local_aligner()
         local_aligner.extend_gap_score = float(extended_gap_score)
         local_aligner.open_gap_score = float(open_gap_score)
