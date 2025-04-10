@@ -1,3 +1,4 @@
+# coding: utf-8
 from Bio.Align import PairwiseAligner, substitution_matrices
 
 

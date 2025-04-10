@@ -1,3 +1,4 @@
+# coding: utf-8
 import ST_pairwise_alignment
 
 
