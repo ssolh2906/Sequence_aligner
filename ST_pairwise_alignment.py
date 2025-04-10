@@ -3,6 +3,14 @@ from aligner_factory import get_global_aligner, get_local_aligner
 
 
 def global_alignment(sequence1, sequence2):
+    """
+    Returns
+    Global alignment of 2 sequences, using Blosum62
+
+    Args:
+        sequence1: First input sequence
+        sequence2: Second input sequence
+    """
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
@@ -14,6 +22,14 @@ def global_alignment(sequence1, sequence2):
 
 
 def local_alignment(sequence1, sequence2):
+    """
+    Returns
+    Local alignment of 2 sequences, using Blosum62
+
+    Args:
+        sequence1: First input sequence
+        sequence2: Second input sequence
+    """
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
@@ -25,6 +41,16 @@ def local_alignment(sequence1, sequence2):
 
 
 def global_alignment_with_penalty(sequence1, sequence2, extended_gap_score, open_gap_score):
+    """
+    Returns
+    Global alignment of 2 sequences, using Blosum62
+
+    Args:
+        sequence1: First input sequence
+        sequence2: Second input sequence
+        extended_gap_score: Extended gap penalty
+        open_gap_score: Open gap penalty
+    """
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
@@ -41,6 +67,16 @@ def global_alignment_with_penalty(sequence1, sequence2, extended_gap_score, open
 
 
 def local_alignment_with_penalty(sequence1, sequence2, extended_gap_score, open_gap_score):
+    """
+    Returns
+    Local alignment of 2 sequences, using Blosum62
+
+    Args:
+        sequence1: First input sequence
+        sequence2: Second input sequence
+        extended_gap_score: Extended gap penalty
+        open_gap_score: Open gap penalty
+    """
     try:
         if not sequence1 or not sequence2:
             raise ValueError("Sequences must not be empty.")
